@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import styles from "./NavBar.module.scss"
 
 class NavBar extends Component {
   render() { 
     return ( 
-      <>
-        <p>NavBar</p>
-      </>
+      <nav className={styles.navBar}>
+        Nav bar
+      </nav>
     );
   }
 }
