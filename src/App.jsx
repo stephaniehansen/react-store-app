@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import NavBar from "./components/NavBar";
+import Hero from "./components/Hero";
 import ProductList from "./components/ProductList";
+
+import products from "./data/products";
 
 class App extends Component {
   render() { 
     return (
       <>
-      <NavBar />
-      <h1>Welcome</h1>
-      <ProductList />
+        <NavBar />
+        <Hero />
+        <ProductList products={products}/>
       </>
     );
   }
 }
- 
+
 export default App;
