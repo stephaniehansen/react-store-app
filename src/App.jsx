@@ -5,6 +5,7 @@ class App extends Component {
   render() { 
     return (
       <>
+      <Navbar />
       <h1>Welcome</h1>
       </>
     );
