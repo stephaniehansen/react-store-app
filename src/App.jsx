@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from "./components/NavBar";
+import ProductList from "./components/ProductList";
 
 class App extends Component {
   render() { 
@@ -7,6 +8,7 @@ class App extends Component {
       <>
       <NavBar />
       <h1>Welcome</h1>
+      <ProductList />
       </>
     );
   }
