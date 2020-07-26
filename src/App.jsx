@@ -9,9 +9,10 @@ class App extends Component {
   state = {
     products: products,
   }
+
   addToCart = (product) => {
     product.inCart = !product.inCart;
-    product.quantity = product.quantity + 1;
+    product.quantity = product.inCart ? 1 : 0;
   }
 
   updateQuantity = (product, quantity) => {
@@ -23,7 +24,7 @@ class App extends Component {
       <>
         <NavBar toggleCart={this.toggleCart}/>
         <Hero />
-        <Routes products={this.state.products} addToCart={this.addToCart} updateQuantity={this.updateQuantity}/>
+        <Routes products={this.state.products} addToCart={this.addToCart} updateQuantity={this.updateQuantity} />
       </>
     );
   }
