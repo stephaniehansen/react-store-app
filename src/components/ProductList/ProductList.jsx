@@ -4,8 +4,8 @@ import Product from "../Product";
 
 export default class ProductList extends Component {
   getProducts = () => {
-    const { products } = this.props;
-    return products.map(product => <Product product={product}/> )
+    const { products, addToCart } = this.props;
+    return products.map(product => <Product product={product} addToCart={addToCart} /> )
   }
 
   render() {

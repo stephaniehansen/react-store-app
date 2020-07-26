@@ -6,12 +6,18 @@ import ProductList from "./components/ProductList";
 import products from "./data/products";
 
 class App extends Component {
+  state = {
+    products: products
+  }
+
+  addToCart = product => product.inCart = !product.inCart;
+
   render() { 
     return (
       <>
         <NavBar />
         <Hero />
-        <ProductList products={products}/>
+        <ProductList products={this.state.products} addToCart={this.addToCart} />
       </>
     );
   }
