@@ -3,17 +3,22 @@ import styles from "./Product.module.scss";
 
 export default class Product extends Component {
   state = {
-    inCart: this.props.product.inCart
+    inCart: this.props.product.inCart,
+    quantity: this.props.product.quantity
   }
 
   addToCart = () => {
     this.props.addToCart(this.props.product);
-    this.setState({
-      inCart: !this.state.inCart,
-    })
+    this.setState({ inCart: !this.state.inCart })
   }
 
-  getButtonText = () =>  !this.state.inCart ? "Add to Cart" : "Item Added!";
+  updateQuantity = () => {
+    this.setState({ quantity: this.state.quantity += 1 })
+    console.log(this.props.product)
+    this.props.updateQuantity(this.props.product, this.state.quantity);
+  }
+
+  getButtonText = () =>  !this.state.inCart ? "Add to Cart" : "Item in Cart";
 
   render() { 
     const { name, price, img, newArrival } = this.props.product;
@@ -24,9 +29,12 @@ export default class Product extends Component {
           <img src={img} alt={name}/>
           {newArrival ? <span>New Arrival</span> : ""}
         </div>
-        <h2>{name}</h2>
-        <h3>£{price}</h3>
-        <button onClick={this.addToCart}>
+        <div className={styles.productContent}>
+          <h2>{name}</h2>
+          <h3>£{price}</h3>
+        </div>
+        <span onClick={this.updateQuantity}>Increment</span>
+        <button className={styles.cartBtn} onClick={this.addToCart} disabled={this.state.inCart}>
           {this.getButtonText()}
         </button>
       </div>
