@@ -7,17 +7,23 @@ import products from "./data/products";
 
 class App extends Component {
   state = {
-    products: products
+    products: products,
+  }
+  addToCart = (product) => {
+    product.inCart = !product.inCart;
+    product.quantity = product.quantity + 1;
   }
 
-  addToCart = product => product.inCart = !product.inCart;
+  updateQuantity = (product, quantity) => {
+    product.quantity = quantity;
+  }
 
   render() { 
     return (
       <>
-        <NavBar />
+        <NavBar toggleCart={this.toggleCart}/>
         <Hero />
-        <Routes products={this.state.products} addToCart={this.addToCart} />
+        <Routes products={this.state.products} addToCart={this.addToCart} updateQuantity={this.updateQuantity}/>
       </>
     );
   }
