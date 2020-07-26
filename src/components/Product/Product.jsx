@@ -12,8 +12,8 @@ export default class Product extends Component {
     this.setState({ inCart: !this.state.inCart })
   }
 
-  updateQuantity = () => {
-    this.setState({ quantity: this.state.quantity += 1 })
+  updateQuantity = (amount) => {
+    this.setState({ quantity: this.state.quantity += amount })
     this.props.updateQuantity(this.props.product, this.state.quantity);
   }
 
@@ -32,7 +32,8 @@ export default class Product extends Component {
           <h2>{name}</h2>
           <h3>£{price}</h3>
         </div>
-        <span onClick={this.updateQuantity}>Increment</span>
+        <span onClick={()=> this.updateQuantity(1)}>Increment</span>
+        <span onClick={()=> this.updateQuantity(-1)}>Decrement</span>
         <button className={styles.cartBtn} onClick={this.addToCart} disabled={this.state.inCart}>
           {this.getButtonText()}
         </button>
