@@ -14,7 +14,6 @@ export default class Product extends Component {
 
   updateQuantity = () => {
     this.setState({ quantity: this.state.quantity += 1 })
-    console.log(this.props.product)
     this.props.updateQuantity(this.props.product, this.state.quantity);
   }
 
