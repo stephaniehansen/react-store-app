@@ -25,7 +25,7 @@ const products = [
     name: "Product 4",
     price: 9.99,
     description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A nostrum excepturi aliquid tenetur cumque et aliquam quia.",
-    img: "https://images.unsplash.com/photo-1583176741168-d3c2b90ddbd4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    img: "https://images.unsplash.com/photo-1593784820143-22a23474f3b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
   },
 ]
 
