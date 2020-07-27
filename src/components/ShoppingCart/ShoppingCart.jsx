@@ -10,7 +10,7 @@ export default class ShoppingCart extends Component {
 
   getCartItems = () => {
     return this.state.cart
-    .map(item => <ShoppingCartItem product={item} addToCart={this.props.addToCart} updateQuantity={this.props.updateQuantity} removeFromCart={this.props.removeFromCart} updateCart={this.updateCart}/>);
+    .map(item => <ShoppingCartItem product={item} updateCart={this.props.updateCart} updateQuantity={this.props.updateQuantity} removeFromCart={this.props.removeFromCart} refreshCart={this.refreshCart}/>);
   }
 
   getCartTotal = () => {
@@ -18,7 +18,7 @@ export default class ShoppingCart extends Component {
     return itemPrices.reduce((total, amount) => total + amount, 0).toFixed(2);
   }
 
-  updateCart = () => {
+  refreshCart = () => {
     this.setState({cart: this.props.products.filter(product => product.inCart)})
   }
 
@@ -40,11 +40,10 @@ export default class ShoppingCart extends Component {
                 <span><h3>£{this.getCartTotal()}</h3></span>
               </div>
               {/* <button className={styles.checkoutBtn}>Checkout</button> */}
-              <PayPalBtn amount={this.getCartTotal()}/>
+              <PayPalBtn amount={this.getCartTotal()} refreshCart={this.refreshCart} emptyCart={this.props.emptyCart} />
             </div>
           </div>
         </div>
-        
       </section>
     );
   }
