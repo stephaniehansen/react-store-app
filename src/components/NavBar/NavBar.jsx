@@ -16,7 +16,7 @@ export default class NavBar extends Component {
         <Link to="cart">
           <CartIcon />
         </Link>
-        </nav>
+      </nav>
     );
   }
 }
