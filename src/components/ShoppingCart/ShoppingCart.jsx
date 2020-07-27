@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from "./ShoppingCart.module.scss";
-import ShoppingCartItem from "../ShoppingCartItem"
+import ShoppingCartItem from "../ShoppingCartItem";
+import PayPalBtn from "../PayPalBtn";
 
 export default class ShoppingCart extends Component {
   state = {
@@ -38,10 +39,12 @@ export default class ShoppingCart extends Component {
                 <span><h3>Total</h3></span>
                 <span><h3>£{this.getCartTotal()}</h3></span>
               </div>
-              <button className={styles.checkoutBtn}>Checkout</button>
+              {/* <button className={styles.checkoutBtn}>Checkout</button> */}
+              <PayPalBtn amount={this.getCartTotal()}/>
             </div>
           </div>
         </div>
+        
       </section>
     );
   }
