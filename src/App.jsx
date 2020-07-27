@@ -18,10 +18,13 @@ class App extends Component {
 
   updateQuantity = (product, quantity) => {
     product.quantity = quantity;
-    this.updateTotal(product);
+    product.quantity > 0 ? this.updateTotal(product) : this.addToCart(product);
   }
 
-  updateTotal = product => product.total = product.quantity * product.price;
+  updateTotal = (product) => {
+    product.total = product.quantity * product.price;
+    this.setState({ products: this.state.products })
+  }
 
   render() { 
     return (
