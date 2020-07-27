@@ -8,6 +8,7 @@ const products = [
     newArrival: false,
     inCart: false,
     quantity: 0,
+    total: 0,
   },
   {
     id: "02",
@@ -18,6 +19,7 @@ const products = [
     newArrival: true,
     inCart: false,
     quantity: 0,
+    total: 0,
   },
   {
     id: "03",
@@ -28,6 +30,7 @@ const products = [
     newArrival: false,
     inCart: false,
     quantity: 0,
+    total: 0,
   },
   {
     id: "04",
@@ -38,6 +41,7 @@ const products = [
     newArrival: false,
     inCart: false,
     quantity: 0,
+    total: 0,
   },
 ]
 
