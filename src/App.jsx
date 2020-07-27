@@ -13,11 +13,15 @@ class App extends Component {
   addToCart = (product) => {
     product.inCart = !product.inCart;
     product.quantity = product.inCart ? 1 : 0;
+    this.updateTotal(product);
   }
 
   updateQuantity = (product, quantity) => {
     product.quantity = quantity;
+    this.updateTotal(product);
   }
+
+  updateTotal = product => product.total = product.quantity * product.price;
 
   render() { 
     return (
