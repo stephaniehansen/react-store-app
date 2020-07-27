@@ -8,7 +8,7 @@ export default class Product extends Component {
   }
 
   addToCart = () => {
-    this.props.addToCart(this.props.product);
+    this.props.updateCart(this.props.product);
     this.setState({ inCart: !this.state.inCart })
   }
 
