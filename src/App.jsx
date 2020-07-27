@@ -10,7 +10,7 @@ class App extends Component {
     products: products,
   }
 
-  addToCart = (product) => {
+  updateCart = (product) => {
     product.inCart = !product.inCart;
     product.quantity = product.inCart ? 1 : 0;
     this.updateTotal(product);
@@ -18,7 +18,7 @@ class App extends Component {
 
   updateQuantity = (product, quantity) => {
     product.quantity = quantity;
-    product.quantity > 0 ? this.updateTotal(product) : this.addToCart(product);
+    product.quantity > 0 ? this.updateTotal(product) : this.updateCart(product);
   }
 
   updateTotal = (product) => {
@@ -26,12 +26,16 @@ class App extends Component {
     this.setState({ products: this.state.products })
   }
 
+  emptyCart = () => {
+    this.state.products.filter(product => product.inCart).map(this.updateCart);
+  }
+
   render() { 
     return (
       <>
         <NavBar toggleCart={this.toggleCart}/>
         <Hero />
-        <Routes products={this.state.products} addToCart={this.addToCart} updateQuantity={this.updateQuantity} />
+        <Routes products={this.state.products} updateCart={this.updateCart} updateQuantity={this.updateQuantity} emptyCart={this.emptyCart} />
       </>
     );
   }
