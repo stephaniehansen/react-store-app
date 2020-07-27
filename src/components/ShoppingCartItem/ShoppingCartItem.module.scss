@@ -1,0 +1,39 @@
+.shoppingCartItem {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+
+  button {
+    width: 26px;
+    height: 20px;
+    border: 1px solid #aaa;
+    outline: none;
+  }
+
+  .itemDetailsContainer {
+    grid-column: 1 / 6;
+    display: flex;
+
+    .itemImg {
+      margin-right: 12px;
+
+      img {
+        object-fit: cover;
+        height: 120px;
+        width: 100px;
+        filter: grayscale(20%);
+      }
+    }
+  }
+
+  .itemQuantity,
+  .itemPrice {
+    display: flex;
+    justify-content: center;
+
+    span {
+      margin: 0 4px;
+    }
+  }
+}
