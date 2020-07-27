@@ -8,8 +8,8 @@ export default class ShoppingCartItem extends Component {
   }
 
   removeFromCart = () => {
-    this.props.addToCart(this.props.product);
-    this.props.updateCart(this.props.updateCart);
+    this.props.updateCart(this.props.product);
+    this.props.refreshCart(this.props.refreshCart);
     this.setState({ inCart: !this.state.inCart })
   }
 
