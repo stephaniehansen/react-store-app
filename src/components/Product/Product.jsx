@@ -34,7 +34,7 @@ export default class Product extends Component {
         </div>
         <span onClick={()=> this.updateQuantity(1)}>Increment</span>
         <span onClick={()=> this.updateQuantity(-1)}>Decrement</span>
-        <button className={styles.cartBtn} onClick={this.addToCart} disabled={this.state.inCart}>
+        <button className={styles.cartBtn} onClick={this.addToCart}>
           {this.getButtonText()}
         </button>
       </div>
