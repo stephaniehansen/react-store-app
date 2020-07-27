@@ -6,11 +6,11 @@ import ProductList from "../../components/ProductList";
 
 export default class Routes extends Component {
   render() { 
-    const { products, addToCart, updateQuantity, removeFromCart } = this.props;
+    const { products, updateCart, updateQuantity, emptyCart } = this.props;
     return (
       <Router>
-        <ProductList path="/" products={products} addToCart={addToCart} updateQuantity={updateQuantity} />
-        <ShoppingCart path="cart" products={products} addToCart={addToCart} updateQuantity={updateQuantity} removeFromCart={removeFromCart} />
+        <ProductList path="/" products={products} updateCart={updateCart} updateQuantity={updateQuantity} />
+        <ShoppingCart path="cart" products={products} updateCart={updateCart} updateQuantity={updateQuantity} emptyCart={emptyCart} />
       </Router>
      );
   }
