@@ -16,6 +16,9 @@ export default class PayPalBtn extends Component {
             alert(`Thank you for your purchase, ${details.payer.name.given_name}!`)
             this.completeTransaction();
           }}
+          options={{
+            currency: "GBP"
+          }}
         />
       ); 
   }
