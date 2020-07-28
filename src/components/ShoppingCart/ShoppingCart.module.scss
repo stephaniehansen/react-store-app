@@ -19,16 +19,16 @@
       width: 30%;
 
       .summaryContainer {
-        min-height: 300px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 20px;
         box-shadow: 0 0 0 1px rgba(20,20,20,.05), 0 8px 12px -4px rgba(20,20,20,.2);
 
-        div {
+        .summaryItem {
           display: flex;
           justify-content: space-between;
+          padding: 30px 0;
         }
         
         .checkoutBtn {
