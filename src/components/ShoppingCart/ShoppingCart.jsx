@@ -35,7 +35,7 @@ export default class ShoppingCart extends Component {
           <div className={styles.rightPanel}>
             <div className={styles.summaryContainer}>
               <h2>Order Summary</h2>
-              <div>
+              <div className={styles.summaryItem}>
                 <span><h3>Total</h3></span>
                 <span><h3>£{this.getCartTotal()}</h3></span>
               </div>
