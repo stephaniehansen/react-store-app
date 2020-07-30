@@ -12,7 +12,7 @@ const products = [
   },
   {
     id: "02",
-    name: "Antioxidant Treatment Oil",
+    name: "Antioxidant Oil",
     price: 9.99,
     description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A nostrum excepturi aliquid tenetur cumque et aliquam quia.",
     img: "https://images.unsplash.com/photo-1585730385904-608936a0593f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
@@ -39,9 +39,9 @@ const products = [
     description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A nostrum excepturi aliquid tenetur cumque et aliquam quia.",
     img: "https://images.unsplash.com/photo-1593784820143-22a23474f3b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
     newArrival: false,
-    inCart: false,
-    quantity: 0,
-    total: 0,
+    inCart: true,
+    quantity: 1,
+    total: 9.99,
   },
 ]
 
