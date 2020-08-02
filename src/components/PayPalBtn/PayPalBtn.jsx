@@ -9,6 +9,7 @@ export default class PayPalBtn extends Component {
 
   render() {
     const { amount } = this.props;
+
       return ( 
         <PayPalButton
           amount={amount}
@@ -17,6 +18,7 @@ export default class PayPalBtn extends Component {
             this.completeTransaction();
           }}
           options={{
+            clientId: process.env.REACT_APP_PP_CLIENT_ID,
             currency: "GBP"
           }}
         />
