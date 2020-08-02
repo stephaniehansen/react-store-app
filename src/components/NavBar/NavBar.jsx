@@ -13,9 +13,11 @@ export default class NavBar extends Component {
             B<span>o</span>tanicals
           </span>
         </Link>
-        <Link to="cart">
-          <CartIcon />
-        </Link>
+        <div className={styles.cartIcon}>
+          <Link to="cart">
+            <CartIcon />
+          </Link>
+        </div>
       </nav>
     );
   }
