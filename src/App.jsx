@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Routes from './containers/Routes';
 import NavBar from "./components/NavBar";
-import Hero from "./components/Hero";
 
 import products from "./data/products";
 
@@ -34,7 +33,6 @@ class App extends Component {
     return (
       <>
         <NavBar toggleCart={this.toggleCart}/>
-        <Hero />
         <Routes products={this.state.products} updateCart={this.updateCart} updateQuantity={this.updateQuantity} emptyCart={this.emptyCart} />
       </>
     );
