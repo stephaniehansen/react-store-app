@@ -28,6 +28,11 @@ export default class ShoppingCart extends Component {
         <div className={styles.cartContainer}>
           <div className={styles.leftPanel}>
             <h1 className={styles.cartTitle}>Shopping Cart</h1>
+            <div className={styles.tableHeadings}>
+              <span>Items</span>
+              <span>Quantity</span>
+              <span>Price</span>
+            </div>
             <div className={styles.shoppingCartItems}>
               {this.state.cart.length ? this.getCartItems() : <p>Your cart is empty.</p>}
             </div>
