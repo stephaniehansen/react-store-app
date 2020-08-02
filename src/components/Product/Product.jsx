@@ -19,6 +19,8 @@ export default class Product extends Component {
 
   getButtonText = () =>  !this.state.inCart ? "Add to Cart" : "Item in Cart";
 
+  getButtonStyle = () => this.state.inCart ? styles.inCart : null;
+
   render() { 
     const { name, price, img, newArrival } = this.props.product;
 
@@ -32,9 +34,9 @@ export default class Product extends Component {
           <h2>{name}</h2>
           <h3>£{price}</h3>
         </div>
-        <span onClick={()=> this.updateQuantity(1)}>Increment</span>
-        <span onClick={()=> this.updateQuantity(-1)}>Decrement</span>
-        <button className={styles.cartBtn} onClick={this.addToCart}>
+        {/* <span onClick={()=> this.updateQuantity(1)}>Increment</span>
+        <span onClick={()=> this.updateQuantity(-1)}>Decrement</span> */}
+        <button className={this.getButtonStyle()} onClick={this.addToCart}>
           {this.getButtonText()}
         </button>
       </div>
