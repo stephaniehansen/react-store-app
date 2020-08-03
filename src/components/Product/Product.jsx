@@ -27,18 +27,20 @@ export default class Product extends Component {
     return (
       <div className={styles.product}>
         <div class={styles.imageWrapper}>
+        <div class={styles.overlay}>
+          <button className={this.getButtonStyle()} onClick={this.addToCart}>
+            {this.getButtonText()}
+          </button>
+        </div>
           <img src={img} alt={name}/>
           {newArrival ? <span>New Arrival</span> : ""}
         </div>
-        <div className={styles.productContent}>
-          <h2>{name}</h2>
-          <h3>£{price}</h3>
+        <div className={styles.productDetails}>
+          <span className={styles.productName}>{name}</span>
+          <span className={styles.productPrice}>£{price}</span>
         </div>
         {/* <span onClick={()=> this.updateQuantity(1)}>Increment</span>
         <span onClick={()=> this.updateQuantity(-1)}>Decrement</span> */}
-        <button className={this.getButtonStyle()} onClick={this.addToCart}>
-          {this.getButtonText()}
-        </button>
       </div>
     );
   }
