@@ -13,13 +13,10 @@
       line-height: 1.5em;
       letter-spacing: .3px;
     }
-
-    .productName {
-      font-weight: 400;
-    }
-
+    
     .productPrice {
       font-weight: 600;
+      padding-top: 2px;
     }
   }
 
@@ -79,12 +76,19 @@
     text-transform: uppercase;
     margin-top: 10px;
     cursor: pointer;
-    width: 70%;
-    max-width: 70%;
+    width: 80%;
+    max-width: 80%;
+
+    @media all and (min-width: 865px) {
+      width: 70%;
+      max-width: 70%;
+    }
 
     &:hover {
       background-color: #000;
     }
+
+
   }
 
   .inCart {
