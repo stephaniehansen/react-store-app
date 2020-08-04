@@ -12,7 +12,7 @@ export default class NavBar extends Component {
         <div className={styles.menu}>
           <IosMenu />
         </div>
-        <Link to="/">
+        <Link to="/react-store-app">
           <span class={styles.logo}>
             B<span>o</span>tanicals
           </span>
