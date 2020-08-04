@@ -39,7 +39,7 @@ const products = [
     description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. A nostrum excepturi aliquid tenetur cumque et aliquam quia.",
     img: require("../assets/product04.jpg"),
     newArrival: false,
-    inCart: true,
+    inCart: false,
     quantity: 1,
     total: 9.99,
   },
