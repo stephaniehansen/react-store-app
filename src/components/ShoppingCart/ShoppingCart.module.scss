@@ -3,16 +3,31 @@
   max-width: 1200px;
 
   .cartTitle {
-    margin-bottom: 24px;
+    margin-bottom: 26px;
+    text-align: center;
+
+    @media all and (min-width: 880px) {
+      text-align: left;
+    }
+
   }
 
   .cartContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 
+    @media all and (min-width: 880px) {
+      flex-direction: row;
+    }
+
     .leftPanel {
-      width: 65%;
+      width: 100%;
+      margin-bottom: 20px;
+
+      @media all and (min-width: 880px) {
+        width: 65%;
+      }
 
       h1 {
         font-size: 36px;
@@ -21,14 +36,18 @@
     }
 
     .tableHeadings {
-      display: grid;
-      grid-template-columns: repeat(7, 1fr);
-      text-transform: uppercase;
-      gap: 12px;
-      font-weight: 600;
-      letter-spacing: .3px;
-      margin: 20px 0 16px 0;
-      font-size: 14px;
+      display: none;
+
+      @media all and (min-width: 486px) {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        text-transform: uppercase;
+        gap: 12px;
+        font-weight: 600;
+        letter-spacing: .3px;
+        margin: 20px 0 16px 0;
+        font-size: 14px;
+      }
 
       span:nth-child(1) {
         grid-column: 1 / 5;
@@ -42,7 +61,11 @@
     }
   
     .rightPanel {
-      width: 30%;
+      width: 100%;
+      
+      @media all and (min-width: 880px) {
+        width: 30%;
+      }
 
       .summaryContainer {
         display: flex;
