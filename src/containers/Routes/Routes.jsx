@@ -10,7 +10,7 @@ export default class Routes extends Component {
     return (
       <Router basepath="/react-store-app">
         <Main path="/" products={products} updateCart={updateCart} updateQuantity={updateQuantity} />
-        <ShoppingCart path="/react-store-app/cart" products={products} updateCart={updateCart} updateQuantity={updateQuantity} emptyCart={emptyCart} />
+        <ShoppingCart path="cart" products={products} updateCart={updateCart} updateQuantity={updateQuantity} emptyCart={emptyCart} />
       </Router>
      );
   }
