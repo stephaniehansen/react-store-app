@@ -18,7 +18,7 @@ export default class NavBar extends Component {
           </span>
         </Link>
         <div className={styles.cartIcon}>
-          <Link to="cart">
+          <Link to="/react-store-app/cart">
             <img src={bagIcon} alt="Shopping Bag" />
           </Link>
         </div>
