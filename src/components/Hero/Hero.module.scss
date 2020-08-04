@@ -1,18 +1,43 @@
 .hero {
-  background: url('../../assets/botanicals-hero.jpg') no-repeat;
-  background-size: cover;
-  height: 500px;
-  background-position: center;
-  filter: grayscale(30%);
+  position: relative;
+  
+  .heroImageWrapper { 
+    background: url('../../assets/botanicals-hero.jpg') no-repeat;
+    background-size: cover;
+    height: 500px;
+    background-position: 90% 50%;
+    filter: grayscale(30%);
 
-  .heroContainer {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    margin-left: 6vw;
+    @media all and (min-width: 768px) {
+      background-position: center;
+    }
+  }
 
     .heroContent {
-      width: 40vw;
+      max-width: 500px;
+      width: 100%;
+      margin: auto;
+      padding: 20px 6vw;
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+
+      @media all and (min-width: 768px) {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin-left: 6vw;
+        width: 40vw;
+      }
+
+      h1 {
+        font-size: 38px;
+
+        @media all and (min-width: 768px) {
+          font-size: 50px;
+        }
+      }
 
       .heroTitle {
         margin-bottom: 14px;
@@ -38,6 +63,6 @@
           margin-top: 24px;
         }
       }
-    }
+    // }
   }
 }
