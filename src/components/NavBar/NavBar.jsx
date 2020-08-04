@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import { Link } from "@reach/router";
 import styles from "./NavBar.module.scss";
 
-import CartIcon from 'react-ionicons/lib/MdCart';
+import bagIcon from "../../assets/shopping-bag-icon.svg";
+import IosMenu from 'react-ionicons/lib/IosMenu';
 
 export default class NavBar extends Component {
   render() { 
     return ( 
       <nav className={styles.navBar}>
+        <div className={styles.menu}>
+          <IosMenu />
+        </div>
         <Link to="/">
           <span class={styles.logo}>
             B<span>o</span>tanicals
@@ -15,7 +19,7 @@ export default class NavBar extends Component {
         </Link>
         <div className={styles.cartIcon}>
           <Link to="cart">
-            <CartIcon />
+            <img src={bagIcon} alt="Shopping Bag" />
           </Link>
         </div>
       </nav>
