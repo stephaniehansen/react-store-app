@@ -17,7 +17,7 @@
       max-width: 500px;
       width: 100%;
       margin: auto;
-      padding: 20px 6vw;
+      padding: 40px 6vw;
       display: flex;
       height: 100%;
       flex-direction: column;
@@ -31,16 +31,17 @@
         width: 40vw;
       }
 
-      h1 {
-        font-size: 38px;
-
-        @media all and (min-width: 768px) {
-          font-size: 50px;
-        }
-      }
-
       .heroTitle {
-        margin-bottom: 14px;
+        margin-bottom: 14px;      
+        
+        h1 {
+        font-size: 38px;
+        line-height: 1.2em;
+
+          @media all and (min-width: 768px) {
+            font-size: 48px;
+          }
+        }
       }
 
       .heroDetails {
