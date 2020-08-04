@@ -19,7 +19,7 @@ export default class ShoppingCartItem extends Component {
   }
 
   render() { 
-    const { img, name, quantity, price } = this.props.product;
+    const { img, name, quantity, price, total } = this.props.product;
     
     return (
       <div className={styles.shoppingCartItem}>
@@ -29,18 +29,21 @@ export default class ShoppingCartItem extends Component {
           </div>
           <div className={styles.itemInfo}>
             <span><h2>{name}</h2></span>
+            <div className={styles.itemRemove}>
+              <a onClick={this.removeFromCart}>Remove</a>
+            </div>
           </div>
+        </div>
+        <div className={styles.itemPrice}>
+          £{price}
         </div>
         <div className={styles.itemQuantity}>
           <button onClick={()=> this.updateQuantity(-1)} disabled={this.state.quantity < 2 }>-</button>
             <span>{quantity}</span>
           <button onClick={()=> this.updateQuantity(1)}>+</button>
         </div>
-        <div className={styles.itemPrice}>
-          £{price}
-        </div>
-        <div className={styles.itemRemove}>
-          <button onClick={this.removeFromCart}>X</button>
+        <div className={styles.itemTotal}>
+          £{total}
         </div>
       </div>
     );
