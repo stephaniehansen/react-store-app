@@ -5,24 +5,41 @@
   margin-bottom: 16px;
 
   .itemDetailsContainer {
-    grid-column: 1 / 5;
+    grid-column: 1 / 6;
     display: flex;
+
+    @media all and (min-width: 486px) {
+      grid-column: 1 / 5;
+    }
 
     .itemImg {
       margin-right: 12px;
 
       img {
         object-fit: cover;
-        height: 120px;
-        width: 100px;
+        height: 80px;
+        width: 60px;
         filter: grayscale(20%);
+
+        @media all and (min-width: 486px) {
+          height: 120px;
+          width: 100px;
+        }
       }
     }
     .itemInfo {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 8px 0 10px 0;
+      padding: 6px 0 10px 0;
+
+      h2 {
+        font-size: 18px;
+
+        @media all and (min-width: 486px) {
+          font-size: 20px;
+        }
+      }
     }
   }
 
@@ -44,15 +61,21 @@
       margin: 0 8px;
     }
   }
-  .itemPrice,
-  .itemTotal {
+  .itemPrice {
     display: flex;
     justify-content: center;
     padding-top: 8px;
   }
 
   .itemTotal {
-    font-weight: bold;
+    display: none;
+
+    @media all and (min-width: 486px) {
+      display: flex;
+      justify-content: center;
+      padding-top: 8px;
+      font-weight: bold;
+    }
   }
 
   .itemRemove {
