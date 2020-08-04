@@ -22,3 +22,7 @@ h1 {
   font-family: 'Playfair Display';
   font-weight: 500;
 }
+
+ul {
+  list-style: none;
+}
