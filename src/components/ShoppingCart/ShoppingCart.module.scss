@@ -1,20 +1,46 @@
 .shoppingCart {
   margin: 40px 6vw;
+  max-width: 1200px;
 
   .cartTitle {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
   }
 
   .cartContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 60vh;
 
     .leftPanel {
       width: 65%;
+
+      h1 {
+        font-size: 36px;
+        font-weight: 400;
+      }
     }
 
+    .tableHeadings {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      text-transform: uppercase;
+      gap: 12px;
+      font-weight: 600;
+      letter-spacing: .3px;
+      margin: 20px 0 16px 0;
+      font-size: 14px;
+
+      span:nth-child(1) {
+        grid-column: 1 / 5;
+        justify-content: flex-start;
+      }
+
+      span {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  
     .rightPanel {
       width: 30%;
 
@@ -29,17 +55,6 @@
           display: flex;
           justify-content: space-between;
           padding: 30px 0;
-        }
-        
-        .checkoutBtn {
-          padding: 14px;
-          border: none;
-          background-color: #112222;
-          color: #fff;
-          font-size: 14px;
-          text-transform: uppercase;
-          font-weight: 600;
-          letter-spacing: .3px;
         }
       }
     }
