@@ -11,8 +11,10 @@ export default class ShoppingCart extends Component {
   }
 
   getCartItems = () => {
+    const { updateCart, updateQuantity, removeFromCart } = this.props;
+    
     return this.state.cart
-    .map(item => <ShoppingCartItem product={item} updateCart={this.props.updateCart} updateQuantity={this.props.updateQuantity} removeFromCart={this.props.removeFromCart} refreshCart={this.refreshCart}/>);
+    .map(item => <ShoppingCartItem product={item} updateCart={updateCart} updateQuantity={updateQuantity} removeFromCart={removeFromCart} refreshCart={this.refreshCart}/>);
   }
 
   getCartTotal = () => {
@@ -21,7 +23,7 @@ export default class ShoppingCart extends Component {
   }
 
   refreshCart = () => {
-    this.setState({cart: this.props.products.filter(product => product.inCart)})
+    this.setState({ cart: this.props.products.filter(product => product.inCart) })
   }
 
   render() {
@@ -34,8 +36,9 @@ export default class ShoppingCart extends Component {
               <h1 className={styles.cartTitle}>Shopping Cart</h1>
               <div className={styles.tableHeadings}>
                 <span>Items</span>
-                <span>Quantity</span>
                 <span>Price</span>
+                <span>Quantity</span>
+                <span>Total</span>
               </div>
               <div className={styles.shoppingCartItems}>
                 {this.state.cart.length ? this.getCartItems() : <p>Your cart is empty.</p>}
@@ -48,7 +51,6 @@ export default class ShoppingCart extends Component {
                   <span><h3>Total</h3></span>
                   <span><h3>£{this.getCartTotal()}</h3></span>
                 </div>
-                {/* <button className={styles.checkoutBtn}>Checkout</button> */}
                 <PayPalBtn amount={this.getCartTotal()} refreshCart={this.refreshCart} emptyCart={this.props.emptyCart} />
               </div>
             </div>
