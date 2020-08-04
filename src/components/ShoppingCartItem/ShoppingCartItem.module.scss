@@ -1,18 +1,11 @@
 .shoppingCartItem {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(7, 1fr);
   gap: 12px;
   margin-bottom: 16px;
 
-  button {
-    width: 26px;
-    height: 20px;
-    border: 1px solid #aaa;
-    outline: none;
-  }
-
   .itemDetailsContainer {
-    grid-column: 1 / 6;
+    grid-column: 1 / 5;
     display: flex;
 
     .itemImg {
@@ -25,15 +18,50 @@
         filter: grayscale(20%);
       }
     }
+    .itemInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 8px 0 10px 0;
+    }
   }
 
-  .itemQuantity,
-  .itemPrice {
+  .itemQuantity {
     display: flex;
     justify-content: center;
+    padding-top: 8px;
+
+    button {
+      width: 24px;
+      height: 20px;
+      border: 1px solid #aaa;
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
+    }
 
     span {
-      margin: 0 4px;
+      margin: 0 8px;
+    }
+  }
+  .itemPrice,
+  .itemTotal {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+  }
+
+  .itemTotal {
+    font-weight: bold;
+  }
+
+  .itemRemove {
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
