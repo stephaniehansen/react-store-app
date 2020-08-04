@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-store-app/static/css/main.c2d598d0.chunk.css",
+    "main.css": "/react-store-app/static/css/main.1ace0c6c.chunk.css",
     "main.js": "/react-store-app/static/js/main.c24d8fca.chunk.js",
     "main.js.map": "/react-store-app/static/js/main.c24d8fca.chunk.js.map",
     "runtime-main.js": "/react-store-app/static/js/runtime-main.28b68be5.js",
@@ -8,9 +8,9 @@
     "static/js/2.9d969579.chunk.js": "/react-store-app/static/js/2.9d969579.chunk.js",
     "static/js/2.9d969579.chunk.js.map": "/react-store-app/static/js/2.9d969579.chunk.js.map",
     "index.html": "/react-store-app/index.html",
-    "precache-manifest.9de44aa16e3aa83cc6406b3dfc867ecd.js": "/react-store-app/precache-manifest.9de44aa16e3aa83cc6406b3dfc867ecd.js",
+    "precache-manifest.067db5342b70dacddff635bd61b3ec13.js": "/react-store-app/precache-manifest.067db5342b70dacddff635bd61b3ec13.js",
     "service-worker.js": "/react-store-app/service-worker.js",
-    "static/css/main.c2d598d0.chunk.css.map": "/react-store-app/static/css/main.c2d598d0.chunk.css.map",
+    "static/css/main.1ace0c6c.chunk.css.map": "/react-store-app/static/css/main.1ace0c6c.chunk.css.map",
     "static/js/2.9d969579.chunk.js.LICENSE.txt": "/react-store-app/static/js/2.9d969579.chunk.js.LICENSE.txt",
     "static/media/Banner.module.scss": "/react-store-app/static/media/botanicals-banner.4b2f8e37.jpg",
     "static/media/Hero.module.scss": "/react-store-app/static/media/botanicals-hero.6b04e505.jpg",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.28b68be5.js",
     "static/js/2.9d969579.chunk.js",
-    "static/css/main.c2d598d0.chunk.css",
+    "static/css/main.1ace0c6c.chunk.css",
     "static/js/main.c24d8fca.chunk.js"
   ]
 }
